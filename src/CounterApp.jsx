@@ -1,11 +1,36 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-export const CounterApp = ( {value}) => {
+export const CounterApp = ( {value} ) => {
+
+    const [ counter, setCounter] = useState( value );
+
+    const handleApp = ( ) => {
+        setCounter( counter + 1)
+    }
+
+    const handleMenos = ( ) => {
+        setCounter( counter - 1)
+    }
+
+    const handleReset = ( ) => {
+        setCounter( value )
+    }
 
     return (
     <>
     <h1>CounterApp</h1>
-    <h2> { value} </h2>
+    <h2> { counter } </h2>
+
+    <button onClick={ handleApp }>    
+        +1
+    </button>
+    <button onClick={ handleMenos }>    
+        -1
+    </button>
+    <button onClick={ handleReset }>    
+        reset
+    </button>
     </>
 )}
 

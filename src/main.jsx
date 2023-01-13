@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <HelloWordApp />
         <FirstApp />
         <SecondApp  />
-        <CounterApp value = {1233333333333} />
+        <CounterApp value={ 15 } />
     </React.StrictMode>
 
 
